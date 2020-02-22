@@ -1,0 +1,147 @@
+<html>
+    <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                input[type=text], select, textarea {
+                  width: 100%;
+                  padding: 12px;
+                  vertical-align: middle;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  resize: vertical;
+                }
+                
+                label {
+                  padding: 12px 12px 12px 0;
+                  display: inline-block;
+                }
+                
+                input[type=submit] {
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  margin-top: 3%;
+                  margin-left: 5%;
+                  float: left;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+                
+                input[type=submit]:hover {
+                  background-color: #45a049;
+                }
+                
+                .container {
+                  border-radius: 5px;
+                  background-color: #000000;
+                  padding: 20px;
+                }
+                
+                .col-25 {
+                  float: left;
+                  color: #FFFFFF;
+                  width: 25%;
+                  margin-top: 2%;
+                  margin-left: 5%;
+                }
+                
+                .col-75 {
+                  float: left;
+                  width: 50%;
+                  margin-top: 2%;
+                }
+                
+                /* Clear floats after the columns */
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                  margin-top:10px;
+                }
+                
+                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                  .col-25{
+                    width: 100%;
+                    margin-top: 5%;
+                    margin-left: 2%;
+                  }
+
+                  .col-75{
+                    width: 90%;
+                    margin-top: 0%;
+                    margin-left: 2%;
+                  }
+
+                  input[type=submit]{
+                    margin-top: 15%;
+                    margin-left: 2%;
+                  }
+
+                  .container{
+                      width: 100%;
+                  }
+                }
+                </style>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+
+    <body>
+        <div class="container">
+        <form action="/result" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                    <div class="col-25">
+                      <label for="Language">LANGUAGE PRESENT IN IMAGE</label>
+                    </div>
+                    <div class="col-75">
+                      <select id="Language" name="source_language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Gujrati">Gujrati</option>
+                        <option value="Telugu">Telugu</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="Language">TRANSLATE TEXT TO </label>
+                    </div>
+                    <div class="col-75">
+                      <select id="Language" name="destination_language">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Russian">Russian</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Urdu">Urdu</option>
+                        <option value="Gujrati">Gujrati</option>
+                        <option value="Telugu">Telugu</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25" >
+                        <label for="subject">UPLOAD IMAGE</label>
+                    </div>
+
+                    <div class="col-75">
+                        <input type="file" name="file"/>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit" value="TRANSLATE AND EXTRACT">
+                  </div>
+        </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+    <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                label {
+                  padding: 12px 12px 12px 0;
+                  display: inline-block;
+                }
+                
+                .container {
+                  border-radius: 5px;
+                  background-color: #000000;
+                  padding: 20px;
+                }
+                
+                .col-25 {
+                  float: left;
+                  color: #FFFFFF;
+                  width: 25%;
+                  margin-top: 6px;
+                }
+                
+                .col-75 {
+                  float: left;
+                  background-color: #FFFFFF;
+                  border-radius: 3px;
+                  padding: 5px;
+                  width: 75%;
+                  margin-top: 6px;
+                }
+
+                .img-class {
+                  width: 75%;
+                  display: block;
+                  margin: auto;
+                }
+                
+                /* Clear floats after the columns */
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+                
+                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 600px) {
+                  .col-25{
+                    width: 100%;
+                    margin-top: 5%;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 120%;
+                  }
+
+                  .col-75{
+                    width: 100%;
+                    margin-top: 0;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 120%;
+                  }
+
+                  .img-class{
+                    width: 100%;
+                    margin: auto;
+                  }
+                }
+                </style>
+    </head> 
+                
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-25">
+                    <label for="UPLOADED IMAGE">UPLOADED IMAGE</label>
+                </div>
+                  
+                <div class="img-class">
+                    <img src="{{data['image_name']}}" height="350px" width="270px">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="EXTRACTED TEXT">Extracted text in {{data['source_language']}} language</label>
+                </div>
+
+                <div class="col-75">
+                    <!-- <textarea id="EXTRACTED TEXT" name="EXTRACTED TEXT" style="height:200px">{{data['extracted_text']}}</textarea> -->
+                    {{data['extracted_text']}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="TRANSLATED TEXT">Translated text in {{data['destination_language']}} language</label>
+                </div>
+
+                <div class="col-75">
+                    <!-- <textarea id="TRANSLATED TEXT" name="TRANSLATED TEXT" style="height:200px">{{data['translated_text']}}</textarea> -->
+                    {{data['translated_text']}}
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
