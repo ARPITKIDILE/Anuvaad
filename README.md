@@ -44,5 +44,6 @@ Tesseract,OpenCV,Googletrans
 - **Arpit Kidile** [ARPITKIDILE](https://github.com/ARPITKIDILE)
 - **Amarkumar Mishra** [IamAmarMishra](https://github.com/IamAmarMishra)
 - **Sai Pawan** [saipawan02](https://github.com/saipawan02)
+- **Aman Pawar** [amanpawar507](https://github.com/amanpawar507)
 
 ***************************************
